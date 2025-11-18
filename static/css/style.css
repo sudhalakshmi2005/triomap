@@ -1,0 +1,225 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #9fd79f;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Controls (search, buttons) */
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.controls input,
+.controls button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #3e8e41;
+  color: white;
+  cursor: pointer;
+}
+
+/* Map */
+#map {
+  height: 500px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Feedback Form */
+.feedback-form {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: hsl(134, 39%, 65%);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #98b861;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.feedback-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Download Excel Button */
+a[download] button {
+  margin: 10px auto;
+  display: block;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #28a745;
+  transition: background 0.3s;
+}
+
+a[download] button:hover {
+  background-color: #218838;
+}
+
+/* Feedback Display */
+#feedbacks {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  padding: 10px;
+}
+
+#feedbacks p {
+  background-color: #fff;
+  padding: 12px;
+  border-left: 5px solid #4CAF50;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+}
+
+/* Theme Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .feedback-form,
+body.dark-mode #feedbacks p {
+  background-color: #1e1e1e;
+  color: white;
+  border-left-color: #90ee90;
+}
+
+body.dark-mode header {
+  background-color: #2e7d32;
+}
+
+body.dark-mode a[download] button {
+  background-color: #66bb6a;
+}
+
+/* 🔓 Logout Button Styling */
+.logout-container {
+  text-align: right;
+  padding: 10px 20px;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Segoe UI', sans-serif; background:#90caf9; color:#333; }
+header { background:#1976d2; color:white; padding:15px; text-align:center; }
+.controls { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:10px 0; }
+.controls button, .controls input { padding:10px 14px; border:none; border-radius:8px; font-size:15px; }
+#map { height:70vh; margin:15px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.3); }
+.feedback-form { margin:20px auto; padding:25px; max-width:600px; background:#bbdefb; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+.feedback-form input, select, textarea { width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #42a5f5; font-size:16px; }
+.feedback-form button { background:#1976d2; color:white; padding:14px; font-size:17px; border-radius:10px; width:100%; }
+.excel-btn { background:#2e7d32; color:white; padding:14px 30px; font-size:17px; border-radius:10px; }
+#feedbacks { max-width:700px; margin:20px auto; padding:10px; }
+.feedback-item { background:white; margin:12px; padding:18px; border-radius:12px; border-left:6px solid #42a5f5; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+body.dark-mode { background:#121212; color:#eee; }
+body.dark-mode .feedback-form { background:#1e272e; }
+body.dark-mode .feedback-item { background:#1e1e1e; border-left-color:#90caf9; }
+/* AI Chatbot Button */
+#ai-chatbot-btn{
+  position:fixed; bottom:20px; right:20px; background:#ff4081; color:white; 
+  width:60px; height:60px; border-radius:50%; font-size:28px; font-weight:bold;
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4); z-index:9999; animation:pulse 2s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,64,129,0.7)}70%{box-shadow:0 0 0 15px rgba(255,64,129,0)}100%{box-shadow:0 0 0 0 rgba(255,64,129,0)}}
+
+/* Chat Window */
+#ai-chat-window{
+  display:none; flex-direction:column; position:fixed; bottom:90px; right:20px; 
+  width:340px; height:520px; background:white; border-radius:18px; 
+  box-shadow:0 10px 40px rgba(0,0,0,0.3); z-index:9999;
+}
+.chat-header{background:#ff4081; color:white; padding:15px; border-radius:18px 18px 0 0; font-weight:bold; position:relative;}
+.close-chat{position:absolute; right:15px; font-size:28px; cursor:pointer;}
+#ai-messages{flex:1; padding:15px; overflow-y:auto; background:#f8f9fa;}
+.ai-msg, .user-msg{
+  margin:10px 0; padding:12px 16px; border-radius:18px; max-width:80%; word-wrap:break-word;
+}
+.ai-msg{background:#e0e0e0; align-self:flex-start;}
+.user-msg{background:#ff4081; color:white; align-self:flex-end;}
+#ai-input{width:100%; padding:16px; border:none; border-top:1px solid #ddd; font-size:16px; outline:none;}
+/* AI Chatbot */
+#ai-chatbot-btn{
+  position:fixed; bottom:20px; right:20px; background:#ff4081; color:white; 
+  width:60px; height:60px; border-radius:50%; font-size:28px; font-weight:bold;
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4); z-index:9999; animation:pulse 2s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,64,129,0.7)}70%{box-shadow:0 0 0 15px rgba(255,64,129,0)}100%{box-shadow:0 0 0 0 rgba(255,64,129,0)}}
+#ai-chat-window{
+  display:none; flex-direction:column; position:fixed; bottom:90px; right:20px; 
+  width:340px; height:520px; background:white; border-radius:18px; 
+  box-shadow:0 10px 40px rgba(0,0,0,0.3); z-index:9999;
+}
+.chat-header{background:#ff4081; color:white; padding:15px; border-radius:18px 18px 0 0; font-weight:bold; position:relative;}
+.close-chat{position:absolute; right:15px; font-size:28px; cursor:pointer;}
+#ai-messages{flex:1; padding:15px; overflow-y:auto; background:#f8f9fa;}
+.ai-msg, .user-msg{
+  margin:10px 0; padding:12px 16px; border-radius:18px; max-width:80%; word-wrap:break-word;
+}
+.ai-msg{background:#e0e0e0; align-self:flex-start;}
+.user-msg{background:#ff4081; color:white; align-self:flex-end;}
+#ai-input{width:100%; padding:16px; border:none; border-top:1px solid #ddd; font-size:16px; outline:none;}

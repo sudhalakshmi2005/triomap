@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RIT Campus Map • Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="light-mode">
+  <header><h2>Welcome to RIT Campus Map</h2></header>
+  <section class="feedback-form">
+    <h3>Login to Continue</h3>
+    <form method="POST" action="/submit_login">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required />
+      <textarea name="purpose" placeholder="Purpose of visit" required></textarea>
+      <button type="submit">Enter Campus</button>
+    </form>
+  </section>
+</body>
+</html>
